@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+.commentBox {
+  scrollbar-color: #ffffff #262626;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+button {
+  cursor: pointer;
+}
