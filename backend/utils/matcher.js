@@ -2,7 +2,7 @@ import Fuse from "fuse.js";
 
 export const findMatches = (items, newItem) => {
   const fuse = new Fuse(items, {
-    keys: ["title", "description", "location", "country"],
+    keys: ["title", "description", "location"],
     threshold: 0.4,
   });
 
