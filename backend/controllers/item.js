@@ -89,10 +89,11 @@ export const MatchItems = async (req, res) => {
     if (!item) {
       return res.status(200).json("Item not foun");
     }
-    const opposite = await Item.find({
+    const oppositeItems = await Item.find({
       type: item.type === "lost" ? "found" : "lost",
     });
-    const matches = findMatches(opposite, item);
+    const matches = findMatches(oppositeItems, item);
+
     res.status(200).json(matches);
   } catch (e) {
     console.log(e);
